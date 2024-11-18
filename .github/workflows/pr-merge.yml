@@ -6,6 +6,10 @@ on:
       - main
       - dev
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   commit-with-user1-details:
     runs-on: ubuntu-latest
