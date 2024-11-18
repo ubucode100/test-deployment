@@ -19,6 +19,12 @@ jobs:
           git config user.name "ubucode"
           git config user.email "hi@ubucode.co.za"
 
+
+      - name: Create Commit as ubucode
+        run: |
+            git checkout ${{ github.head_ref }}
+            git commit --allow-empty -m "Verified PR by User2"
+
       - name: Merge PR
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
